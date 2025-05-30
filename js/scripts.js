@@ -4,7 +4,7 @@ const products = [
         id: 1, 
         name: "1957 Independence Issue", 
         price: 200, 
-        img: "1.jpg",
+        img: "images/1.jpg",
         category: "historical",
         year: 1957,
         description: "First anniversary of Algerian independence"
