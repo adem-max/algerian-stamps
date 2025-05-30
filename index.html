@@ -1,39 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Algerian Stamp Marketplace</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algerian Stamps Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo">Algerian Stamps 🏛️</div>
-    <nav>
-      <a href="login.html">Login</a>
-      <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-stamp"></i> Algerian Stamps</h1>
+            <nav>
+                <a href="#products">Shop</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
 
-  <main>
-    <section class="hero">
-      <h1>Collect the Beauty of Algeria</h1>
-      <p>Rare & historical Algerian stamps for collectors</p>
-    </section>
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Discover Algeria's Rich History</h2>
+                <p>Collectible stamps from 1954 to present</p>
+                <a href="#products" class="btn">Browse Collection</a>
+            </div>
+        </section>
 
-    <section class="products" id="product-list">
-      <!-- JS will inject stamp cards -->
-    </section>
-  </main>
+        <section id="products" class="products-section">
+            <h2><i class="fas fa-stamp"></i> Our Collection</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="historical">Historical</button>
+                <button class="filter-btn" data-filter="flora">Flora</button>
+                <button class="filter-btn" data-filter="commemorative">Commemorative</button>
+            </div>
+            <div id="product-list" class="product-grid"></div>
+        </section>
 
-  <div class="cart-modal" id="cart">
-    <h2>Your Cart</h2>
-    <ul id="cart-items"></ul>
-    <p>Total: <span id="total-price">0 DA</span></p>
-    <button onclick="checkout()">Checkout</button>
-  </div>
+        <section id="about" class="about-section">
+            <h2><i class="fas fa-info-circle"></i> About Our Collection</h2>
+            <p>Authentic Algerian postage stamps carefully preserved and curated for collectors worldwide. Each stamp comes with a certificate of authenticity.</p>
+        </section>
+    </main>
 
-  <script src="js/scripts.js"></script>
+    <div id="cart" class="cart-overlay">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" onclick="toggleCart()">&times;</button>
+            </div>
+            <ul id="cart-items" class="cart-items"></ul>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="total-price">0 DA</span>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> contact@algerianstamps.dz</p>
+                    <p><i class="fas fa-phone"></i> +213 123 456 789</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Algerian Stamps Collection. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
