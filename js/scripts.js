@@ -133,7 +133,7 @@ function renderProducts(filter = 'all') {
         productCard.className = 'product-card';
         productCard.innerHTML = `
             <div class="image-container">
-                <img src="${product.img}" alt="${product.name}" onerror="this.src='images/placeholder.jpg'">
+                <img src="images/${product.img}" alt="${product.name}" onerror="this.onerror=null;this.src='images/placeholder.jpg'">
             </div>
             <div class="product-info">
                 <h3>${product.name}</h3>
