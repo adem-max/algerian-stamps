@@ -257,3 +257,15 @@ function showToast(message, type = 'success') {
 
 // Initialize the app when DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
+
+// Wait for images to load
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+    
+    // Double check if images failed to load
+    document.querySelectorAll('img').forEach(img => {
+        if(img.naturalWidth === 0) {
+            img.src = 'images/placeholder.jpg';
+        }
+    });
+});
