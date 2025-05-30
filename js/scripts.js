@@ -1,8 +1,12 @@
 const products = [
-  { id: 1, name: "1957 Postage Stamp", price: 200, img: "images/sample-stamp-1.jpg" },
-  { id: 2, name: "1962 Independence Stamp", price: 450, img: "images/sample-stamp-2.jpg" },
-  { id: 3, name: "National Flower Stamp", price: 300, img: "images/sample-stamp-3.jpg" },
-  { id: 4, name: "Historic Landmark Stamp", price: 350, img: "images/sample-stamp-4.jpg" }
+  { id: 1, name: "1957 Postage Stamp", price: 200, img: "images/stamp-1.jpg" },
+  { id: 2, name: "1962 Independence Stamp", price: 450, img: "images/stamp-2.jpg" },
+  { id: 3, name: "National Flower Stamp", price: 300, img: "images/stamp-3.jpg" },
+  { id: 4, name: "Historic Landmark Stamp", price: 350, img: "images/stamp-4.jpg" }
+  { id: 1, name: "1957 Postage Stamp", price: 200, img: "images/stamp-5.jpg" },
+  { id: 2, name: "1962 Independence Stamp", price: 450, img: "images/stamp-6.jpg" },
+  { id: 3, name: "National Flower Stamp", price: 300, img: "images/stamp-7.jpg" },
+  { id: 4, name: "Historic Landmark Stamp", price: 350, img: "images/stamp-8.jpg" }
 ];
 
 let cart = [];
