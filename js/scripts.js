@@ -1,10 +1,12 @@
 // Modernized Product Data with correct image paths
+const basePath = "algerian-stamps/";
+
 const products = [
     { 
         id: 1, 
         name: "1957 Independence Issue", 
         price: 200, 
-        img: "images/1.jpg",
+        img: basePath + "images/1.jpg",
         category: "historical",
         year: 1957,
         description: "First anniversary of Algerian independence"
@@ -13,7 +15,7 @@ const products = [
         id: 2, 
         name: "1962 Revolution Heroes", 
         price: 450, 
-        img: "images/2.jpg",
+        img: basePath + "images/2.jpg",
         category: "historical",
         year: 1962,
         description: "Commemorating the revolution leaders"
@@ -22,7 +24,7 @@ const products = [
         id: 3, 
         name: "Algerian Jasmine", 
         price: 300, 
-        img: "images/3.jpg",
+        img: basePath + "images/3.jpg",
         category: "flora",
         year: 1975,
         description: "National flower series"
@@ -31,7 +33,7 @@ const products = [
         id: 4, 
         name: "Casbah of Algiers", 
         price: 350, 
-        img: "images/4.jpg",
+        img: basePath + "images/4.jpg",
         category: "historical",
         year: 1980,
         description: "UNESCO World Heritage site"
@@ -40,7 +42,7 @@ const products = [
         id: 5, 
         name: "Saharan Wildlife", 
         price: 280, 
-        img: "images/5.jpg",
+        img: basePath + "images/5.jpg",
         category: "flora",
         year: 1992,
         description: "Endangered species series"
@@ -49,7 +51,7 @@ const products = [
         id: 6, 
         name: "50th Independence", 
         price: 500, 
-        img: "images/6.jpg",
+        img: basePath + "images/6.jpg",
         category: "commemorative",
         year: 2012,
         description: "Golden jubilee celebration"
@@ -58,7 +60,7 @@ const products = [
         id: 7, 
         name: "Traditional Crafts", 
         price: 320, 
-        img: "images/7.jpg",
+        img: basePath + "images/7.jpg",
         category: "commemorative",
         year: 2018,
         description: "Cultural heritage series"
@@ -67,7 +69,7 @@ const products = [
         id: 8, 
         name: "African Unity", 
         price: 400, 
-        img: "images/8.jpg",
+        img: basePath + "images/8.jpg",
         category: "commemorative",
         year: 2020,
         description: "Pan-African cooperation"
