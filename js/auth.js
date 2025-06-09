@@ -1,55 +1,47 @@
-// Login functionality
 document.addEventListener('DOMContentLoaded', function() {
-  // Get elements
-  const loginButton = document.getElementById('loginButton');
-  const loginModal = document.getElementById('loginModal');
-  const closeButton = document.querySelector('.close');
-  const loginForm = document.getElementById('loginForm');
-  
-  // Show modal when login button clicked
-  loginButton.addEventListener('click', function() {
-    loginModal.style.display = 'block';
-  });
-  
-  // Close modal when X is clicked
-  closeButton.addEventListener('click', function() {
-    loginModal.style.display = 'none';
-  });
-  
-  // Close modal when clicking outside
-  window.addEventListener('click', function(event) {
-    if (event.target === loginModal) {
-      loginModal.style.display = 'none';
-    }
-  });
-  
-  // Handle form submission
-  loginForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+    const loginBtn = document.getElementById('loginBtn');
+    const loginModal = document.getElementById('loginModal');
     
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    
-    // Simple hardcoded credentials (not secure for production)
-    if (username === 'lahcen' && password === 'lahcenbelfarah') {
-      localStorage.setItem('isAuthenticated', 'true');
-      loginModal.style.display = 'none';
-      alert('Login successful!');
-      
-      // Redirect to admin page or show admin controls
-      window.location.href = 'admin.html'; // You'll need to create this
-    } else {
-      alert('Invalid credentials. Please try again.');
+    if (loginBtn && loginModal) {
+        const closeModal = loginModal.querySelector('.close');
+        const loginForm = document.getElementById('loginForm');
+
+        // Open modal
+        loginBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.style.display = 'block';
+        });
+
+        // Close modal
+        if (closeModal) {
+            closeModal.addEventListener('click', function() {
+                loginModal.style.display = 'none';
+            });
+        }
+
+        // Close when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+        });
+
+        // Form submission
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                
+                // TEMPORARY - REPLACE WITH REAL AUTH
+                if (username === "artist" && password === "stamp123") {
+                    localStorage.setItem('isAuthenticated', 'true');
+                    loginModal.style.display = 'none';
+                    window.location.href = "admin.html";
+                } else {
+                    alert('Invalid credentials. Try:\nUsername: artist\nPassword: stamp123');
+                }
+            });
+        }
     }
-  });
-  
-  // Check if already logged in
-  if (localStorage.getItem('isAuthenticated') {
-    // You might want to change the login button to logout
-    loginButton.textContent = 'Admin Panel';
-    loginButton.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.location.href = 'admin.html';
-    });
-  }
 });
