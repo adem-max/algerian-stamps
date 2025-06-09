@@ -742,6 +742,7 @@ body.loaded #loading {
   }
 }
 /* ▼▼▼ Add these modal styles ▼▼▼ */
+/* ▼▼▼ Modal Styles ▼▼▼ */
 .modal {
   display: none;
   position: fixed;
@@ -765,7 +766,7 @@ body.loaded #loading {
   position: relative;
 }
 
-.close-modal {
+.modal .close {
   color: #6c757d;
   position: absolute;
   right: 20px;
@@ -775,7 +776,7 @@ body.loaded #loading {
   cursor: pointer;
 }
 
-.close-modal:hover {
+.modal .close:hover {
   color: #495057;
 }
 
@@ -783,24 +784,24 @@ body.loaded #loading {
   margin-top: 20px;
 }
 
-.form-group {
+#loginForm .form-group {
   margin-bottom: 1rem;
 }
 
-.form-group label {
+#loginForm .form-group label {
   display: block;
   margin-bottom: 0.5rem;
   color: #495057;
 }
 
-.form-group input {
+#loginForm .form-group input {
   width: 100%;
   padding: 0.375rem 0.75rem;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
 }
 
-#loginForm button {
+#loginForm button[type="submit"] {
   width: 100%;
   padding: 0.5rem;
   background-color: #28a745;
@@ -810,7 +811,7 @@ body.loaded #loading {
   cursor: pointer;
 }
 
-#loginForm button:hover {
+#loginForm button[type="submit"]:hover {
   background-color: #218838;
 }
-/* ▲▲▲ End of modal styles ▲▲▲ */
+/* ▲▲▲ End Modal Styles ▲▲▲ */
