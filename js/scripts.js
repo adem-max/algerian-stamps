@@ -226,7 +226,16 @@ function removeFromCart(productId) {
 function toggleCart() {
     cartOverlay.style.right = cartOverlay.style.right === '0px' ? '-100%' : '0px';
 }
-
+// In your main scripts.js
+function displayStamps() {
+  // Your existing code to display stamps
+  
+  // Add this to check for locally stored stamps
+  const localStamps = JSON.parse(localStorage.getItem('stamps')) || [];
+  localStamps.forEach(stamp => {
+    // Add to your display
+  });
+}
 // Checkout function
 function checkout() {
     if (cart.length === 0) {
