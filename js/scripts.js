@@ -128,12 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const password = document.getElementById('password').value;
 
                 // Simple check for demonstration purposes. Replace with real authentication.
-                if (username === "artist" && password === "stamp123") {
+                if (username === "lahcen" && password === "lahcenbelfarah") {
                     localStorage.setItem('isAuthenticated', 'true');
                     loginModal.style.display = 'none';
                     window.location.href = "admin.html"; // Redirect to admin page
                 } else {
-                    alert('Invalid credentials. Try:\nUsername: artist\nPassword: stamp123');
+                    alert('Invalid credentials.');
                 }
             });
         }
