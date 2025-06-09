@@ -1,0 +1,21 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel - Algerian Stamps</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="checkAuth()">
+    <div class="admin-container">
+        <h1>Add New Stamp</h1>
+        <form id="stampForm">
+            <input type="text" id="stampName" placeholder="Stamp Name" required>
+            <input type="text" id="stampYear" placeholder="Year" required>
+            <textarea id="stampDescription" placeholder="Description"></textarea>
+            <input type="file" id="stampImage" accept="image/*" required>
+            <button type="submit">Add Stamp</button>
+        </form>
+    </div>
+    <script src="js/admin.js"></script>
+</body>
+</html>
